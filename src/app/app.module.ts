@@ -10,6 +10,9 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { EscuelaComponent } from './escuela/escuela.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { EscuelaService } from './escuela/escuela.service';
+import { RegistrarescuelaComponent } from './escuela/registrarescuela/registrarescuela.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,15 +21,17 @@ import { InicioComponent } from './inicio/inicio.component';
     FooterComponent,
     EstudianteComponent,
     EscuelaComponent,
-    InicioComponent
+    InicioComponent,
+    RegistrarescuelaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [EscuelaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

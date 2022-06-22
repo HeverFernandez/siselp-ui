@@ -1,1 +1,27 @@
-<p>escuela works!</p>
+
+<div class="card">
+  <div class="card-header">
+    Lista de Escuelas Profesionales </div>
+  <div class="card-body">
+
+    <table class="table caption-top">
+      <caption></caption>
+      <thead>
+        <tr>
+          <th scope="col">Idescuela</th>
+          <th scope="col">Codigo</th>
+          <th scope="col">Denominación</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let itemEscuela of listaEscuelas">
+          <td>{{itemEscuela.idescuela}}</td>
+          <td>{{itemEscuela.codigo}}</td>
+          <td>{{itemEscuela.denominacion}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <a class="btn btn-primary" [routerLink]="['/escuelas/registro']">Registrar nuevo</a>
+  </div>
+</div>
