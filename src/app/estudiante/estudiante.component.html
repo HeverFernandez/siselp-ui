@@ -19,16 +19,19 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
+        <tr *ngFor="let itemEstudiante of estudianteListaServidor">
+          <td>{{itemEstudiante.dni}}</td>
+          <td>{{itemEstudiante.nombre}}</td>
+          <td>{{itemEstudiante.apellido}}</td>
+          <td>{{itemEstudiante.edad}}</td>
+          <td>{{itemEstudiante.sexo}}</td>
+          <td>{{itemEstudiante.telefono}}</td>
+          <td>{{itemEstudiante.fechaNacimiento}}</td>
+          <td>{{itemEstudiante.codigo}}</td>
+          <td>{{itemEstudiante.serie}}</td>
         </tr>
       </tbody>
     </table>
-
-
 
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
